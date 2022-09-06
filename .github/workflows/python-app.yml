@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip wheel setuptools
-        python -m pip install pyinstaller
+        python -m pip install pyinstaller winshell
     - name: Create executables
       run: |
         pyinstaller --onefile --noconsole rickroll.pyw
@@ -34,4 +34,4 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: ./dist/rickroll.pyw
+        path: ./dist/rickroll.exe
