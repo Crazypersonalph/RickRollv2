@@ -29,9 +29,9 @@ jobs:
         python -m pip install pyinstaller winshell
     - name: Create executables
       run: |
-        pyinstaller --onefile --noconsole rickroll.pyw
+        pyinstaller --onefile --noconsole idk.pyw
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v3.1.0
       with:
-        path: ./dist/rickroll.exe
+        path: ./dist/idk.exe
